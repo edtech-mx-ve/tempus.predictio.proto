@@ -93,8 +93,29 @@ def verify_run(run: Path, results_root: Path) -> dict[str, str]:
         total += size
         if total > MAX_ARCHIVE_SIZE:
             raise DataValidationError("Los resultados exceden el límite del paquete")
-        if not isinstance(manifest[filename], str) or digest(path.read_bytes()) != manifest[filename]:
-            raise DataValidationError(f"SHA-256 distinto en {filename}")
+        esperado = manifest[filename]
+        contenido = path.read_bytes()
+
+        coincide = (
+            isinstance(esperado, str)
+            and digest(contenido) == esperado
+        )
+
+        if (
+            not coincide
+            and isinstance(esperado, str)
+            and path.suffix.lower() in {".csv", ".json"}
+        ):
+            lf = contenido.replace(b"\r\n", b"\n")
+            coincide = (
+                digest(lf) == esperado
+                or digest(lf.replace(b"\n", b"\r\n")) == esperado
+            )
+
+        if not coincide:
+            raise DataValidationError(
+                f"SHA-256 distinto en {filename}"
+            )
     return manifest
 
 
