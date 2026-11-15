@@ -1,0 +1,11 @@
+ticker,horizonte,modelo,MAE_validacion
+JNJ,1,Ingenuo,1.0193106333333344
+JNJ,5,Ingenuo,2.4868265787916655
+JPM,1,Ingenuo,2.636857350583337
+JPM,5,Ingenuo,6.009855906124997
+MSFT,1,Holt-Winters aditivo sin estacionalidad,3.631908765618976
+MSFT,5,Ingenuo,10.755336761499999
+WMT,1,Holt-Winters aditivo sin estacionalidad,0.7806927621362855
+WMT,5,Holt-Winters aditivo sin estacionalidad,1.6109283294840857
+XOM,1,"ARIMA(1,1,0)",1.3424079622303722
+XOM,5,"ARIMA(1,1,0)",2.5595844247068626

@@ -1,0 +1,226 @@
+{
+  "module": "TEMPUS PREDICTIO PROTO",
+  "sprint": 3,
+  "status": "PASS",
+  "data_contract": "tempus-financial-ohlcv/1.0",
+  "source_audit_status": "PASS",
+  "input_sha256": {
+    "insumos\\Antonio_Toro_Practica-1_dataset-informe_U4_S4_TIATD.zip": "13c2fba3137757fbcd9c6e42c0be20209ad5ea51760f9f1988d5a71baf660154",
+    "insumos\\Antonio_Toro_Practica-1_tempus-exploratio-proto_U4_S4_TIATD.zip": "27bda7a04dbd8ce131664fc4294dc15a6629afa5ca25d2d25d637f16b53f6d80"
+  },
+  "data_sha256": "e0f792a512d260f0154b0c6c16227b69da4f1eb9d2e917208854c599e65c0e76",
+  "scope": "EXPLORATORY_ONLY_NO_PREDICTIONS",
+  "caveats": [
+    "La tendencia OLS y STL se ajustan sobre muestra completa: solo descriptivas.",
+    "El período de 5 sesiones es una hipótesis exploratoria, no estacionalidad probada.",
+    "Los picos de Fourier no implican ciclos estables ni capacidad predictiva.",
+    "No se eliminaron ni interpolaron valores extremos."
+  ],
+  "symbols": {
+    "JNJ": {
+      "observations": 2514,
+      "return_observations": 2513,
+      "trend": {
+        "slope_log_per_session": 0.00030907083063559014,
+        "intercept_log": 4.528130471338449,
+        "r_squared": 0.8149534362762341,
+        "annualized_log_trend_pct": 8.099925482706523,
+        "p_value_ols_naive": 0.0
+      },
+      "stl": {
+        "period_sessions": 5,
+        "reconstruction_max_abs_error": 1.3877787807814457e-17,
+        "seasonal_strength_exploratory": 0.11079649759229615
+      },
+      "spectrum": {
+        "window": "hann",
+        "input": "demeaned_log_returns",
+        "top_peaks_exploratory": [
+          {
+            "period_sessions": 2.255834829443447,
+            "frequency_cycles_per_session": 0.4432948666931954,
+            "spectral_power": 1.3891255518903337e-06
+          },
+          {
+            "period_sessions": 2.2619261926192618,
+            "frequency_cycles_per_session": 0.44210107441305213,
+            "spectral_power": 1.2955631153513642e-06
+          },
+          {
+            "period_sessions": 2.350795135640786,
+            "frequency_cycles_per_session": 0.42538798249104653,
+            "spectral_power": 1.286321755905626e-06
+          }
+        ],
+        "period_search_sessions": [
+          2,
+          252
+        ]
+      }
+    },
+    "MSFT": {
+      "observations": 2514,
+      "return_observations": 2513,
+      "trend": {
+        "slope_log_per_session": 0.0008938371279136925,
+        "intercept_log": 4.217621516633583,
+        "r_squared": 0.9295640160368641,
+        "annualized_log_trend_pct": 25.263202328500693,
+        "p_value_ols_naive": 0.0
+      },
+      "stl": {
+        "period_sessions": 5,
+        "reconstruction_max_abs_error": 2.7755575615628914e-17,
+        "seasonal_strength_exploratory": 0.11074240658420187
+      },
+      "spectrum": {
+        "window": "hann",
+        "input": "demeaned_log_returns",
+        "top_peaks_exploratory": [
+          {
+            "period_sessions": 2.350795135640786,
+            "frequency_cycles_per_session": 0.42538798249104653,
+            "spectral_power": 3.550948557483843e-06
+          },
+          {
+            "period_sessions": 2.257861635220126,
+            "frequency_cycles_per_session": 0.4428969359331476,
+            "spectral_power": 3.37884449900728e-06
+          },
+          {
+            "period_sessions": 2.3355018587360594,
+            "frequency_cycles_per_session": 0.4281734978113808,
+            "spectral_power": 3.0825135070936404e-06
+          }
+        ],
+        "period_search_sessions": [
+          2,
+          252
+        ]
+      }
+    },
+    "JPM": {
+      "observations": 2514,
+      "return_observations": 2513,
+      "trend": {
+        "slope_log_per_session": 0.0006210100503130655,
+        "intercept_log": 4.0881583588774895,
+        "r_squared": 0.8738463978361963,
+        "annualized_log_trend_pct": 16.940436879237662,
+        "p_value_ols_naive": 0.0
+      },
+      "stl": {
+        "period_sessions": 5,
+        "reconstruction_max_abs_error": 1.3877787807814457e-17,
+        "seasonal_strength_exploratory": 0.11399919153834193
+      },
+      "spectrum": {
+        "window": "hann",
+        "input": "demeaned_log_returns",
+        "top_peaks_exploratory": [
+          {
+            "period_sessions": 2.352996254681648,
+            "frequency_cycles_per_session": 0.4249900517309988,
+            "spectral_power": 3.0975355370150103e-06
+          },
+          {
+            "period_sessions": 2.3333333333333335,
+            "frequency_cycles_per_session": 0.42857142857142855,
+            "spectral_power": 3.0930855433928287e-06
+          },
+          {
+            "period_sessions": 2.2619261926192618,
+            "frequency_cycles_per_session": 0.44210107441305213,
+            "spectral_power": 3.047026427853898e-06
+          }
+        ],
+        "period_search_sessions": [
+          2,
+          252
+        ]
+      }
+    },
+    "WMT": {
+      "observations": 2514,
+      "return_observations": 2513,
+      "trend": {
+        "slope_log_per_session": 0.0006759860676738607,
+        "intercept_log": 2.9809673247959756,
+        "r_squared": 0.9302423395483926,
+        "annualized_log_trend_pct": 18.571798906929242,
+        "p_value_ols_naive": 0.0
+      },
+      "stl": {
+        "period_sessions": 5,
+        "reconstruction_max_abs_error": 1.3877787807814457e-17,
+        "seasonal_strength_exploratory": 0.08434836915066468
+      },
+      "spectrum": {
+        "window": "hann",
+        "input": "demeaned_log_returns",
+        "top_peaks_exploratory": [
+          {
+            "period_sessions": 2.9119351100811124,
+            "frequency_cycles_per_session": 0.3434142459212097,
+            "spectral_power": 1.8114509117366242e-06
+          },
+          {
+            "period_sessions": 4.732580037664783,
+            "frequency_cycles_per_session": 0.21130123358535616,
+            "spectral_power": 1.7797143808782437e-06
+          },
+          {
+            "period_sessions": 2.255834829443447,
+            "frequency_cycles_per_session": 0.4432948666931954,
+            "spectral_power": 1.5950047778666638e-06
+          }
+        ],
+        "period_search_sessions": [
+          2,
+          252
+        ]
+      }
+    },
+    "XOM": {
+      "observations": 2514,
+      "return_observations": 2513,
+      "trend": {
+        "slope_log_per_session": 0.0004786101226054385,
+        "intercept_log": 3.6486496605170995,
+        "r_squared": 0.6225980198432772,
+        "annualized_log_trend_pct": 12.818455343761187,
+        "p_value_ols_naive": 0.0
+      },
+      "stl": {
+        "period_sessions": 5,
+        "reconstruction_max_abs_error": 1.3877787807814457e-17,
+        "seasonal_strength_exploratory": 0.12917215210269772
+      },
+      "spectrum": {
+        "window": "hann",
+        "input": "demeaned_log_returns",
+        "top_peaks_exploratory": [
+          {
+            "period_sessions": 2.253811659192825,
+            "frequency_cycles_per_session": 0.44369279745324314,
+            "spectral_power": 4.23075008960086e-06
+          },
+          {
+            "period_sessions": 4.059773828756058,
+            "frequency_cycles_per_session": 0.2463191404695583,
+            "spectral_power": 4.050195002683736e-06
+          },
+          {
+            "period_sessions": 4.585766423357664,
+            "frequency_cycles_per_session": 0.21806605650616792,
+            "spectral_power": 3.5852239305391113e-06
+          }
+        ],
+        "period_search_sessions": [
+          2,
+          252
+        ]
+      }
+    }
+  }
+}

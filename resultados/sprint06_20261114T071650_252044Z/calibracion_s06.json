@@ -1,0 +1,755 @@
+{
+  "module": "TEMPUS PREDICTIO PROTO",
+  "sprint": 6,
+  "status": "PASS",
+  "scope": "HISTORICAL_BACKTEST_ONLY",
+  "contract": "tempus-financial-ohlcv/1.0",
+  "source_audit": "PASS",
+  "dataset_sha256": "13c2fba3137757fbcd9c6e42c0be20209ad5ea51760f9f1988d5a71baf660154",
+  "source_zip_sha256": "27bda7a04dbd8ce131664fc4294dc15a6629afa5ca25d2d25d637f16b53f6d80",
+  "s04_report_sha256": "6d1b5d1973dcf62e9f9fc72733b9f3d33a03d450d8c7618b9788f0312ff86351",
+  "s05_report_sha256": "75c621ab22d446b43907cd16a03cd22560bfd6ae69d76aedba7e237203858f35",
+  "confidence": 0.9,
+  "rolling_window": 120,
+  "model_selection": "Congelada por validación S04; no se cambia por test",
+  "calibration_protocol": "últimos 120 errores de objetivo madurado al origen",
+  "limitations": [
+    "Cobertura nominal no garantizada en series dependientes",
+    "Evaluación retrospectiva, no pronóstico en tiempo real",
+    "No se optimiza ventana sobre test",
+    "Objetivos h5 solapados; errores dependientes",
+    "No hay beneficio de inversión demostrado"
+  ],
+  "symbols": {
+    "JNJ": {
+      "1": {
+        "nominal": 0.9,
+        "static_s05_coverage": 0.7248677248677249,
+        "rolling_coverage": 0.8571428571428571,
+        "static_s05_mean_width_usd": 4.98501990308489,
+        "rolling_mean_width_usd": 7.354145830983076,
+        "rolling_window": 120,
+        "min_calibration": 60,
+        "test_n": 378,
+        "static_by_quarter": [
+          {
+            "quarter": 1,
+            "n": 95,
+            "start_date": "2025-05-01",
+            "end_date": "2025-09-16",
+            "coverage": 0.8947368421052632
+          },
+          {
+            "quarter": 2,
+            "n": 95,
+            "start_date": "2025-09-17",
+            "end_date": "2026-02-02",
+            "coverage": 0.8
+          },
+          {
+            "quarter": 3,
+            "n": 94,
+            "start_date": "2026-02-03",
+            "end_date": "2026-06-17",
+            "coverage": 0.7021276595744681
+          },
+          {
+            "quarter": 4,
+            "n": 94,
+            "start_date": "2026-06-18",
+            "end_date": "2026-10-30",
+            "coverage": 0.5
+          }
+        ],
+        "rolling_by_quarter": [
+          {
+            "quarter": 1,
+            "n": 95,
+            "start_date": "2025-05-01",
+            "end_date": "2025-09-16",
+            "coverage": 0.9157894736842105
+          },
+          {
+            "quarter": 2,
+            "n": 95,
+            "start_date": "2025-09-17",
+            "end_date": "2026-02-02",
+            "coverage": 0.8315789473684211
+          },
+          {
+            "quarter": 3,
+            "n": 94,
+            "start_date": "2026-02-03",
+            "end_date": "2026-06-17",
+            "coverage": 0.8297872340425532
+          },
+          {
+            "quarter": 4,
+            "n": 94,
+            "start_date": "2026-06-18",
+            "end_date": "2026-10-30",
+            "coverage": 0.851063829787234
+          }
+        ],
+        "coverage_delta_percentage_points": 13.22751322751322,
+        "status": "COMPARISON_ONLY_NOT_CALIBRATED_GUARANTEE"
+      },
+      "5": {
+        "nominal": 0.9,
+        "static_s05_coverage": 0.606951871657754,
+        "rolling_coverage": 0.8422459893048129,
+        "static_s05_mean_width_usd": 10.440929055485412,
+        "rolling_mean_width_usd": 17.270019291354576,
+        "rolling_window": 120,
+        "min_calibration": 60,
+        "test_n": 374,
+        "static_by_quarter": [
+          {
+            "quarter": 1,
+            "n": 94,
+            "start_date": "2025-05-07",
+            "end_date": "2025-09-19",
+            "coverage": 0.8617021276595744
+          },
+          {
+            "quarter": 2,
+            "n": 94,
+            "start_date": "2025-09-22",
+            "end_date": "2026-02-04",
+            "coverage": 0.5638297872340425
+          },
+          {
+            "quarter": 3,
+            "n": 93,
+            "start_date": "2026-02-05",
+            "end_date": "2026-06-18",
+            "coverage": 0.5698924731182796
+          },
+          {
+            "quarter": 4,
+            "n": 93,
+            "start_date": "2026-06-22",
+            "end_date": "2026-10-30",
+            "coverage": 0.43010752688172044
+          }
+        ],
+        "rolling_by_quarter": [
+          {
+            "quarter": 1,
+            "n": 94,
+            "start_date": "2025-05-07",
+            "end_date": "2025-09-19",
+            "coverage": 0.9042553191489362
+          },
+          {
+            "quarter": 2,
+            "n": 94,
+            "start_date": "2025-09-22",
+            "end_date": "2026-02-04",
+            "coverage": 0.7340425531914894
+          },
+          {
+            "quarter": 3,
+            "n": 93,
+            "start_date": "2026-02-05",
+            "end_date": "2026-06-18",
+            "coverage": 0.9032258064516129
+          },
+          {
+            "quarter": 4,
+            "n": 93,
+            "start_date": "2026-06-22",
+            "end_date": "2026-10-30",
+            "coverage": 0.8279569892473119
+          }
+        ],
+        "coverage_delta_percentage_points": 23.529411764705888,
+        "status": "COMPARISON_ONLY_NOT_CALIBRATED_GUARANTEE"
+      }
+    },
+    "MSFT": {
+      "1": {
+        "nominal": 0.9,
+        "static_s05_coverage": 0.8227513227513228,
+        "rolling_coverage": 0.9021164021164021,
+        "static_s05_mean_width_usd": 17.66454491995467,
+        "rolling_mean_width_usd": 22.816863158425722,
+        "rolling_window": 120,
+        "min_calibration": 60,
+        "test_n": 378,
+        "static_by_quarter": [
+          {
+            "quarter": 1,
+            "n": 95,
+            "start_date": "2025-05-01",
+            "end_date": "2025-09-16",
+            "coverage": 0.9052631578947369
+          },
+          {
+            "quarter": 2,
+            "n": 95,
+            "start_date": "2025-09-17",
+            "end_date": "2026-02-02",
+            "coverage": 0.8421052631578947
+          },
+          {
+            "quarter": 3,
+            "n": 94,
+            "start_date": "2026-02-03",
+            "end_date": "2026-06-17",
+            "coverage": 0.7553191489361702
+          },
+          {
+            "quarter": 4,
+            "n": 94,
+            "start_date": "2026-06-18",
+            "end_date": "2026-10-30",
+            "coverage": 0.7872340425531915
+          }
+        ],
+        "rolling_by_quarter": [
+          {
+            "quarter": 1,
+            "n": 95,
+            "start_date": "2025-05-01",
+            "end_date": "2025-09-16",
+            "coverage": 0.9578947368421052
+          },
+          {
+            "quarter": 2,
+            "n": 95,
+            "start_date": "2025-09-17",
+            "end_date": "2026-02-02",
+            "coverage": 0.8631578947368421
+          },
+          {
+            "quarter": 3,
+            "n": 94,
+            "start_date": "2026-02-03",
+            "end_date": "2026-06-17",
+            "coverage": 0.851063829787234
+          },
+          {
+            "quarter": 4,
+            "n": 94,
+            "start_date": "2026-06-18",
+            "end_date": "2026-10-30",
+            "coverage": 0.9361702127659575
+          }
+        ],
+        "coverage_delta_percentage_points": 7.9365079365079305,
+        "status": "COMPARISON_ONLY_NOT_CALIBRATED_GUARANTEE"
+      },
+      "5": {
+        "nominal": 0.9,
+        "static_s05_coverage": 0.820855614973262,
+        "rolling_coverage": 0.8770053475935828,
+        "static_s05_mean_width_usd": 39.7069603181584,
+        "rolling_mean_width_usd": 55.93395436695111,
+        "rolling_window": 120,
+        "min_calibration": 60,
+        "test_n": 374,
+        "static_by_quarter": [
+          {
+            "quarter": 1,
+            "n": 94,
+            "start_date": "2025-05-07",
+            "end_date": "2025-09-19",
+            "coverage": 0.9468085106382979
+          },
+          {
+            "quarter": 2,
+            "n": 94,
+            "start_date": "2025-09-22",
+            "end_date": "2026-02-04",
+            "coverage": 0.7872340425531915
+          },
+          {
+            "quarter": 3,
+            "n": 93,
+            "start_date": "2026-02-05",
+            "end_date": "2026-06-18",
+            "coverage": 0.7526881720430108
+          },
+          {
+            "quarter": 4,
+            "n": 93,
+            "start_date": "2026-06-22",
+            "end_date": "2026-10-30",
+            "coverage": 0.7956989247311828
+          }
+        ],
+        "rolling_by_quarter": [
+          {
+            "quarter": 1,
+            "n": 94,
+            "start_date": "2025-05-07",
+            "end_date": "2025-09-19",
+            "coverage": 0.9787234042553191
+          },
+          {
+            "quarter": 2,
+            "n": 94,
+            "start_date": "2025-09-22",
+            "end_date": "2026-02-04",
+            "coverage": 0.7446808510638298
+          },
+          {
+            "quarter": 3,
+            "n": 93,
+            "start_date": "2026-02-05",
+            "end_date": "2026-06-18",
+            "coverage": 0.8709677419354839
+          },
+          {
+            "quarter": 4,
+            "n": 93,
+            "start_date": "2026-06-22",
+            "end_date": "2026-10-30",
+            "coverage": 0.9139784946236559
+          }
+        ],
+        "coverage_delta_percentage_points": 5.614973262032086,
+        "status": "COMPARISON_ONLY_NOT_CALIBRATED_GUARANTEE"
+      }
+    },
+    "JPM": {
+      "1": {
+        "nominal": 0.9,
+        "static_s05_coverage": 0.783068783068783,
+        "rolling_coverage": 0.9021164021164021,
+        "static_s05_mean_width_usd": 9.09411434580005,
+        "rolling_mean_width_usd": 13.250258058788166,
+        "rolling_window": 120,
+        "min_calibration": 60,
+        "test_n": 378,
+        "static_by_quarter": [
+          {
+            "quarter": 1,
+            "n": 95,
+            "start_date": "2025-05-01",
+            "end_date": "2025-09-16",
+            "coverage": 0.8842105263157894
+          },
+          {
+            "quarter": 2,
+            "n": 95,
+            "start_date": "2025-09-17",
+            "end_date": "2026-02-02",
+            "coverage": 0.7368421052631579
+          },
+          {
+            "quarter": 3,
+            "n": 94,
+            "start_date": "2026-02-03",
+            "end_date": "2026-06-17",
+            "coverage": 0.723404255319149
+          },
+          {
+            "quarter": 4,
+            "n": 94,
+            "start_date": "2026-06-18",
+            "end_date": "2026-10-30",
+            "coverage": 0.7872340425531915
+          }
+        ],
+        "rolling_by_quarter": [
+          {
+            "quarter": 1,
+            "n": 95,
+            "start_date": "2025-05-01",
+            "end_date": "2025-09-16",
+            "coverage": 0.9578947368421052
+          },
+          {
+            "quarter": 2,
+            "n": 95,
+            "start_date": "2025-09-17",
+            "end_date": "2026-02-02",
+            "coverage": 0.8315789473684211
+          },
+          {
+            "quarter": 3,
+            "n": 94,
+            "start_date": "2026-02-03",
+            "end_date": "2026-06-17",
+            "coverage": 0.8829787234042553
+          },
+          {
+            "quarter": 4,
+            "n": 94,
+            "start_date": "2026-06-18",
+            "end_date": "2026-10-30",
+            "coverage": 0.9361702127659575
+          }
+        ],
+        "coverage_delta_percentage_points": 11.904761904761907,
+        "status": "COMPARISON_ONLY_NOT_CALIBRATED_GUARANTEE"
+      },
+      "5": {
+        "nominal": 0.9,
+        "static_s05_coverage": 0.893048128342246,
+        "rolling_coverage": 0.9197860962566845,
+        "static_s05_mean_width_usd": 25.758426662323878,
+        "rolling_mean_width_usd": 29.72644316891379,
+        "rolling_window": 120,
+        "min_calibration": 60,
+        "test_n": 374,
+        "static_by_quarter": [
+          {
+            "quarter": 1,
+            "n": 94,
+            "start_date": "2025-05-07",
+            "end_date": "2025-09-19",
+            "coverage": 0.9468085106382979
+          },
+          {
+            "quarter": 2,
+            "n": 94,
+            "start_date": "2025-09-22",
+            "end_date": "2026-02-04",
+            "coverage": 0.851063829787234
+          },
+          {
+            "quarter": 3,
+            "n": 93,
+            "start_date": "2026-02-05",
+            "end_date": "2026-06-18",
+            "coverage": 0.8494623655913979
+          },
+          {
+            "quarter": 4,
+            "n": 93,
+            "start_date": "2026-06-22",
+            "end_date": "2026-10-30",
+            "coverage": 0.9247311827956989
+          }
+        ],
+        "rolling_by_quarter": [
+          {
+            "quarter": 1,
+            "n": 94,
+            "start_date": "2025-05-07",
+            "end_date": "2025-09-19",
+            "coverage": 0.9893617021276596
+          },
+          {
+            "quarter": 2,
+            "n": 94,
+            "start_date": "2025-09-22",
+            "end_date": "2026-02-04",
+            "coverage": 0.8191489361702128
+          },
+          {
+            "quarter": 3,
+            "n": 93,
+            "start_date": "2026-02-05",
+            "end_date": "2026-06-18",
+            "coverage": 0.9032258064516129
+          },
+          {
+            "quarter": 4,
+            "n": 93,
+            "start_date": "2026-06-22",
+            "end_date": "2026-10-30",
+            "coverage": 0.967741935483871
+          }
+        ],
+        "coverage_delta_percentage_points": 2.67379679144385,
+        "status": "COMPARISON_ONLY_NOT_CALIBRATED_GUARANTEE"
+      }
+    },
+    "WMT": {
+      "1": {
+        "nominal": 0.9,
+        "static_s05_coverage": 0.7724867724867724,
+        "rolling_coverage": 0.8941798941798942,
+        "static_s05_mean_width_usd": 3.4135812338388405,
+        "rolling_mean_width_usd": 5.241633123599217,
+        "rolling_window": 120,
+        "min_calibration": 60,
+        "test_n": 378,
+        "static_by_quarter": [
+          {
+            "quarter": 1,
+            "n": 95,
+            "start_date": "2025-05-01",
+            "end_date": "2025-09-16",
+            "coverage": 0.9157894736842105
+          },
+          {
+            "quarter": 2,
+            "n": 95,
+            "start_date": "2025-09-17",
+            "end_date": "2026-02-02",
+            "coverage": 0.8315789473684211
+          },
+          {
+            "quarter": 3,
+            "n": 94,
+            "start_date": "2026-02-03",
+            "end_date": "2026-06-17",
+            "coverage": 0.6170212765957447
+          },
+          {
+            "quarter": 4,
+            "n": 94,
+            "start_date": "2026-06-18",
+            "end_date": "2026-10-30",
+            "coverage": 0.723404255319149
+          }
+        ],
+        "rolling_by_quarter": [
+          {
+            "quarter": 1,
+            "n": 95,
+            "start_date": "2025-05-01",
+            "end_date": "2025-09-16",
+            "coverage": 0.9578947368421052
+          },
+          {
+            "quarter": 2,
+            "n": 95,
+            "start_date": "2025-09-17",
+            "end_date": "2026-02-02",
+            "coverage": 0.8631578947368421
+          },
+          {
+            "quarter": 3,
+            "n": 94,
+            "start_date": "2026-02-03",
+            "end_date": "2026-06-17",
+            "coverage": 0.8191489361702128
+          },
+          {
+            "quarter": 4,
+            "n": 94,
+            "start_date": "2026-06-18",
+            "end_date": "2026-10-30",
+            "coverage": 0.9361702127659575
+          }
+        ],
+        "coverage_delta_percentage_points": 12.169312169312175,
+        "status": "COMPARISON_ONLY_NOT_CALIBRATED_GUARANTEE"
+      },
+      "5": {
+        "nominal": 0.9,
+        "static_s05_coverage": 0.7540106951871658,
+        "rolling_coverage": 0.8877005347593583,
+        "static_s05_mean_width_usd": 7.819769328795147,
+        "rolling_mean_width_usd": 12.695780671908931,
+        "rolling_window": 120,
+        "min_calibration": 60,
+        "test_n": 374,
+        "static_by_quarter": [
+          {
+            "quarter": 1,
+            "n": 94,
+            "start_date": "2025-05-07",
+            "end_date": "2025-09-19",
+            "coverage": 0.8723404255319149
+          },
+          {
+            "quarter": 2,
+            "n": 94,
+            "start_date": "2025-09-22",
+            "end_date": "2026-02-04",
+            "coverage": 0.723404255319149
+          },
+          {
+            "quarter": 3,
+            "n": 93,
+            "start_date": "2026-02-05",
+            "end_date": "2026-06-18",
+            "coverage": 0.6989247311827957
+          },
+          {
+            "quarter": 4,
+            "n": 93,
+            "start_date": "2026-06-22",
+            "end_date": "2026-10-30",
+            "coverage": 0.7204301075268817
+          }
+        ],
+        "rolling_by_quarter": [
+          {
+            "quarter": 1,
+            "n": 94,
+            "start_date": "2025-05-07",
+            "end_date": "2025-09-19",
+            "coverage": 0.9893617021276596
+          },
+          {
+            "quarter": 2,
+            "n": 94,
+            "start_date": "2025-09-22",
+            "end_date": "2026-02-04",
+            "coverage": 0.7978723404255319
+          },
+          {
+            "quarter": 3,
+            "n": 93,
+            "start_date": "2026-02-05",
+            "end_date": "2026-06-18",
+            "coverage": 0.8709677419354839
+          },
+          {
+            "quarter": 4,
+            "n": 93,
+            "start_date": "2026-06-22",
+            "end_date": "2026-10-30",
+            "coverage": 0.8924731182795699
+          }
+        ],
+        "coverage_delta_percentage_points": 13.36898395721925,
+        "status": "COMPARISON_ONLY_NOT_CALIBRATED_GUARANTEE"
+      }
+    },
+    "XOM": {
+      "1": {
+        "nominal": 0.9,
+        "static_s05_coverage": 0.7566137566137566,
+        "rolling_coverage": 0.8677248677248677,
+        "static_s05_mean_width_usd": 4.503295898437482,
+        "rolling_mean_width_usd": 6.827985369969925,
+        "rolling_window": 120,
+        "min_calibration": 60,
+        "test_n": 378,
+        "static_by_quarter": [
+          {
+            "quarter": 1,
+            "n": 95,
+            "start_date": "2025-05-01",
+            "end_date": "2025-09-16",
+            "coverage": 0.8947368421052632
+          },
+          {
+            "quarter": 2,
+            "n": 95,
+            "start_date": "2025-09-17",
+            "end_date": "2026-02-02",
+            "coverage": 0.8421052631578947
+          },
+          {
+            "quarter": 3,
+            "n": 94,
+            "start_date": "2026-02-03",
+            "end_date": "2026-06-17",
+            "coverage": 0.6276595744680851
+          },
+          {
+            "quarter": 4,
+            "n": 94,
+            "start_date": "2026-06-18",
+            "end_date": "2026-10-30",
+            "coverage": 0.6595744680851063
+          }
+        ],
+        "rolling_by_quarter": [
+          {
+            "quarter": 1,
+            "n": 95,
+            "start_date": "2025-05-01",
+            "end_date": "2025-09-16",
+            "coverage": 0.9368421052631579
+          },
+          {
+            "quarter": 2,
+            "n": 95,
+            "start_date": "2025-09-17",
+            "end_date": "2026-02-02",
+            "coverage": 0.8315789473684211
+          },
+          {
+            "quarter": 3,
+            "n": 94,
+            "start_date": "2026-02-03",
+            "end_date": "2026-06-17",
+            "coverage": 0.7659574468085106
+          },
+          {
+            "quarter": 4,
+            "n": 94,
+            "start_date": "2026-06-18",
+            "end_date": "2026-10-30",
+            "coverage": 0.9361702127659575
+          }
+        ],
+        "coverage_delta_percentage_points": 11.111111111111105,
+        "status": "COMPARISON_ONLY_NOT_CALIBRATED_GUARANTEE"
+      },
+      "5": {
+        "nominal": 0.9,
+        "static_s05_coverage": 0.6844919786096256,
+        "rolling_coverage": 0.8582887700534759,
+        "static_s05_mean_width_usd": 9.14184638150874,
+        "rolling_mean_width_usd": 14.504943877502564,
+        "rolling_window": 120,
+        "min_calibration": 60,
+        "test_n": 374,
+        "static_by_quarter": [
+          {
+            "quarter": 1,
+            "n": 94,
+            "start_date": "2025-05-07",
+            "end_date": "2025-09-19",
+            "coverage": 0.8085106382978723
+          },
+          {
+            "quarter": 2,
+            "n": 94,
+            "start_date": "2025-09-22",
+            "end_date": "2026-02-04",
+            "coverage": 0.8191489361702128
+          },
+          {
+            "quarter": 3,
+            "n": 93,
+            "start_date": "2026-02-05",
+            "end_date": "2026-06-18",
+            "coverage": 0.5053763440860215
+          },
+          {
+            "quarter": 4,
+            "n": 93,
+            "start_date": "2026-06-22",
+            "end_date": "2026-10-30",
+            "coverage": 0.6021505376344086
+          }
+        ],
+        "rolling_by_quarter": [
+          {
+            "quarter": 1,
+            "n": 94,
+            "start_date": "2025-05-07",
+            "end_date": "2025-09-19",
+            "coverage": 0.9148936170212766
+          },
+          {
+            "quarter": 2,
+            "n": 94,
+            "start_date": "2025-09-22",
+            "end_date": "2026-02-04",
+            "coverage": 0.8617021276595744
+          },
+          {
+            "quarter": 3,
+            "n": 93,
+            "start_date": "2026-02-05",
+            "end_date": "2026-06-18",
+            "coverage": 0.6989247311827957
+          },
+          {
+            "quarter": 4,
+            "n": 93,
+            "start_date": "2026-06-22",
+            "end_date": "2026-10-30",
+            "coverage": 0.956989247311828
+          }
+        ],
+        "coverage_delta_percentage_points": 17.37967914438503,
+        "status": "COMPARISON_ONLY_NOT_CALIBRATED_GUARANTEE"
+      }
+    }
+  }
+}

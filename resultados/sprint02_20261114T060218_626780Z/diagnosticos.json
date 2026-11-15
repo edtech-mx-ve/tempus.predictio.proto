@@ -1,0 +1,196 @@
+{
+  "module": "TEMPUS PREDICTIO PROTO",
+  "sprint": 2,
+  "status": "PASS",
+  "data_sha256": "e0f792a512d260f0154b0c6c16227b69da4f1eb9d2e917208854c599e65c0e76",
+  "data_contract": "tempus-financial-ohlcv/1.0",
+  "source_audit": {
+    "project": "TEMPUS PREDICTIO PROTO",
+    "sprint": 1,
+    "contract": "tempus-financial-ohlcv/1.0",
+    "input_zip_sha256": {
+      "dataset": "13c2fba3137757fbcd9c6e42c0be20209ad5ea51760f9f1988d5a71baf660154",
+      "source": "27bda7a04dbd8ce131664fc4294dc15a6629afa5ca25d2d25d637f16b53f6d80"
+    },
+    "csv": {
+      "status": "PASS",
+      "total_rows": 12570,
+      "rows_by_symbol": {
+        "JNJ": 2514,
+        "JPM": 2514,
+        "MSFT": 2514,
+        "WMT": 2514,
+        "XOM": 2514
+      },
+      "start": "2016-10-31",
+      "end": "2026-10-30",
+      "csv_sha256": "e0f792a512d260f0154b0c6c16227b69da4f1eb9d2e917208854c599e65c0e76"
+    },
+    "snapshots": {
+      "JNJ": {
+        "status": "PASS",
+        "sha256": "16e88cd7927ac671e1d63bd0f95f9b8ba4d061d41398827671e05f0f457dc3f7",
+        "records": 2514,
+        "first_date": "2016-10-31",
+        "last_date": "2026-10-30"
+      },
+      "MSFT": {
+        "status": "PASS",
+        "sha256": "2c9bd42d9eb9e39a685c4dcd69227625feff044e443432d039d7bd16a4f5aa1b",
+        "records": 2514,
+        "first_date": "2016-10-31",
+        "last_date": "2026-10-30"
+      },
+      "JPM": {
+        "status": "PASS",
+        "sha256": "787f53961d022d1e86b1f185baf731f3dc8b86bfa461e8d751ab1b4de5485af3",
+        "records": 2514,
+        "first_date": "2016-10-31",
+        "last_date": "2026-10-30"
+      },
+      "WMT": {
+        "status": "PASS",
+        "sha256": "033e98fd5dd2282afa31cfb755e2147b2fe13cc261bb6cf1925acc030a09e564",
+        "records": 2514,
+        "first_date": "2016-10-31",
+        "last_date": "2026-10-30"
+      },
+      "XOM": {
+        "status": "PASS",
+        "sha256": "8cea546e141f0aa3184e34300de6f7f5e2484c25205db9e12c05fe32de020cd9",
+        "records": 2514,
+        "first_date": "2016-10-31",
+        "last_date": "2026-10-30"
+      }
+    },
+    "csv_parquet_equivalence": {
+      "status": "PASS",
+      "symbols": {
+        "JNJ": "PASS",
+        "MSFT": "PASS",
+        "JPM": "PASS",
+        "WMT": "PASS",
+        "XOM": "PASS"
+      }
+    },
+    "xnys_calendar": {
+      "status": "PASS",
+      "sessions": {
+        "JNJ": 2514,
+        "MSFT": 2514,
+        "JPM": 2514,
+        "WMT": 2514,
+        "XOM": 2514
+      }
+    },
+    "summary": "PASS"
+  },
+  "interpretation": "Pruebas de normalidad sobre log-retornos; los atípicos se señalan, no se eliminan. Las MA son retrospectivas. No se infiere capacidad predictiva.",
+  "symbols": {
+    "JNJ": {
+      "normality_logreturns": {
+        "n": 2513,
+        "mean": 0.0004491110561557863,
+        "std": 0.01199093802627402,
+        "skew": -0.4247456149068127,
+        "excess_kurtosis": 8.899574489438825,
+        "dagostino_p": 7.690311282596446e-107,
+        "jarque_bera_p": 0.0,
+        "alpha": 0.05,
+        "reject_normality_dagostino": true,
+        "reject_normality_jarque_bera": true
+      },
+      "outliers_mad_logreturns": 65,
+      "total_sessions": 2514,
+      "rolling_windows": [
+        5,
+        20,
+        50
+      ]
+    },
+    "MSFT": {
+      "normality_logreturns": {
+        "n": 2513,
+        "mean": 0.0009085972876931601,
+        "std": 0.017457690725092914,
+        "skew": 0.007145447834793128,
+        "excess_kurtosis": 8.840497402921732,
+        "dagostino_p": 2.73079293308861e-91,
+        "jarque_bera_p": 0.0,
+        "alpha": 0.05,
+        "reject_normality_dagostino": true,
+        "reject_normality_jarque_bera": true
+      },
+      "outliers_mad_logreturns": 60,
+      "total_sessions": 2514,
+      "rolling_windows": [
+        5,
+        20,
+        50
+      ]
+    },
+    "JPM": {
+      "normality_logreturns": {
+        "n": 2513,
+        "mean": 0.0007333211078709603,
+        "std": 0.017228217919243637,
+        "skew": -0.09038710062600593,
+        "excess_kurtosis": 13.543130647221293,
+        "dagostino_p": 1.0633933629370854e-115,
+        "jarque_bera_p": 0.0,
+        "alpha": 0.05,
+        "reject_normality_dagostino": true,
+        "reject_normality_jarque_bera": true
+      },
+      "outliers_mad_logreturns": 73,
+      "total_sessions": 2514,
+      "rolling_windows": [
+        5,
+        20,
+        50
+      ]
+    },
+    "WMT": {
+      "normality_logreturns": {
+        "n": 2513,
+        "mean": 0.0007294759237031008,
+        "std": 0.013978838461014116,
+        "skew": -0.1945456500080108,
+        "excess_kurtosis": 13.204079842341525,
+        "dagostino_p": 6.3293911547496436e-117,
+        "jarque_bera_p": 0.0,
+        "alpha": 0.05,
+        "reject_normality_dagostino": true,
+        "reject_normality_jarque_bera": true
+      },
+      "outliers_mad_logreturns": 55,
+      "total_sessions": 2514,
+      "rolling_windows": [
+        5,
+        20,
+        50
+      ]
+    },
+    "XOM": {
+      "normality_logreturns": {
+        "n": 2513,
+        "mean": 0.0004941322682170739,
+        "std": 0.017916964759733398,
+        "skew": -0.23390669781362297,
+        "excess_kurtosis": 5.969202826055218,
+        "dagostino_p": 1.3833973399491143e-75,
+        "jarque_bera_p": 0.0,
+        "alpha": 0.05,
+        "reject_normality_dagostino": true,
+        "reject_normality_jarque_bera": true
+      },
+      "outliers_mad_logreturns": 56,
+      "total_sessions": 2514,
+      "rolling_windows": [
+        5,
+        20,
+        50
+      ]
+    }
+  }
+}

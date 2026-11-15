@@ -1,0 +1,48 @@
+{
+  "contrato": "predictio-proto-arima-holt/1.0",
+  "protocolo": "origen expansivo, ajustes solo hasta origen; orígenes espaciados; selección en validación",
+  "no_es_pronostico_operativo": true,
+  "horizontes": [
+    1,
+    5
+  ],
+  "modelos": [
+    "Ingenuo",
+    "ARIMA(1,1,0)",
+    "Holt-Winters aditivo sin estacionalidad"
+  ],
+  "datos": {
+    "JNJ": {
+      "sha256": "3faeebc64dc6dde99850edd6a3e9589f9c327ae45c1cc4ea395d81cfba92f7a8",
+      "filas": 2514,
+      "desde": "2016-10-31",
+      "hasta": "2026-10-30"
+    },
+    "MSFT": {
+      "sha256": "805aa534ac92177901be240a971575f9b2c3038935e62db313fafceab70ed540",
+      "filas": 2514,
+      "desde": "2016-10-31",
+      "hasta": "2026-10-30"
+    },
+    "JPM": {
+      "sha256": "fbfa5b126e19963c85379bafab48a3c3c5009a286a646ed33f57ba4fa1dc31ca",
+      "filas": 2514,
+      "desde": "2016-10-31",
+      "hasta": "2026-10-30"
+    },
+    "WMT": {
+      "sha256": "f5607fa25180e678e25de5e1732c3f882eddaaa11f38ee719ac00fff146fc7d1",
+      "filas": 2514,
+      "desde": "2016-10-31",
+      "hasta": "2026-10-30"
+    },
+    "XOM": {
+      "sha256": "1d8ca971787099c8ab857135767466c86e65ab9c9908eb911f9dba55f6ecaebd",
+      "filas": 2514,
+      "desde": "2016-10-31",
+      "hasta": "2026-10-30"
+    }
+  },
+  "max_origenes_por_particion": 24,
+  "nota": "Holt-Winters de nivel y tendencia amortiguada; no se fuerza estacionalidad financiera."
+}

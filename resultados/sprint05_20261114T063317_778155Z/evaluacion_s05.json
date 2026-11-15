@@ -1,0 +1,436 @@
+{
+  "module": "TEMPUS PREDICTIO PROTO",
+  "sprint": 5,
+  "status": "PASS",
+  "scope": "HISTORICAL_BACKTEST_ONLY",
+  "contract": "tempus-financial-ohlcv/1.0",
+  "source_audit": "PASS",
+  "dataset_sha256": "13c2fba3137757fbcd9c6e42c0be20209ad5ea51760f9f1988d5a71baf660154",
+  "source_zip_sha256": "27bda7a04dbd8ce131664fc4294dc15a6629afa5ca25d2d25d637f16b53f6d80",
+  "s04_report_sha256": "6d1b5d1973dcf62e9f9fc72733b9f3d33a03d450d8c7618b9788f0312ff86351",
+  "s04_report_source": "E:\\DISCO C\\Antonio Toro\\UIA-MAI\\9. Topicos IA para Transformacion Digital\\Unidad4\\TEMPUS DECISIO PROTO\\TEMPUS PREDICTIO PROTO\\resultados\\sprint04_20261114T062222_741405Z\\modelos_s04.json",
+  "model_selection": "S04: solamente validación, bloqueado antes de test",
+  "estimation": "AR1 reentrenado en cada origen con observaciones hasta ese origen",
+  "evaluation": "target-index split; h-1 embargo antes de primer objetivo test",
+  "uncertainty": "radio basado en errores de validación; cobertura marginal no garantizada con dependencia/no estacionariedad",
+  "limits": [
+    "No es un pronóstico en tiempo real ni una recomendación de inversión",
+    "La calibración y elección se basan en la validación histórica",
+    "Los errores test con h=5 están solapados; contraste HAC exploratorio",
+    "Las bandas no cuentan con garantía conformal bajo dependencia temporal",
+    "El análisis estadístico es post-selección y no prueba beneficio económico",
+    "No incorpora comisiones ni costes transaccionales"
+  ],
+  "symbols": {
+    "JNJ": {
+      "1": {
+        "selected_model_from_s04_validation": "ar1_10.0",
+        "horizon_sessions": 1,
+        "train_observations": 1759,
+        "calibration_targets": 377,
+        "test_targets_after_embargo": 378,
+        "embargo_targets": 0,
+        "first_test_origin_date": "2025-04-30",
+        "first_test_target_date": "2025-05-01",
+        "last_test_target_date": "2026-10-30",
+        "interval_method": "absolute_residual_validation_quantile",
+        "nominal_confidence": 0.9,
+        "radius_usd": 2.492509951542445,
+        "empirical_test_coverage": 0.7248677248677249,
+        "average_interval_width_usd": 4.98501990308489,
+        "selected_metrics": {
+          "n": 378,
+          "mae": 1.9902557445920481,
+          "rmse": 2.763547362624529,
+          "smape_pct": 0.9164646971837954,
+          "bias": -0.2460570352180564
+        },
+        "naive_metrics": {
+          "n": 378,
+          "mae": 1.993632967509918,
+          "rmse": 2.7699447061809757,
+          "smape_pct": 0.9183545209623328,
+          "bias": -0.32470557803199407
+        },
+        "improvement_mae_pct": 0.16940043493001156,
+        "error_comparison_hac_exploratory": {
+          "n": 378,
+          "mean_absolute_loss_advantage": 0.003377222917869573,
+          "hac_lags": 4,
+          "hac_se": 0.004388215043721484,
+          "z_exploratory": 0.7696119912586312,
+          "p_value_exploratory": 0.4415300897805915
+        },
+        "p95_absolute_error_usd": 5.46292352016884
+      },
+      "5": {
+        "selected_model_from_s04_validation": "ar1_0.1",
+        "horizon_sessions": 5,
+        "train_observations": 1759,
+        "calibration_targets": 377,
+        "test_targets_after_embargo": 374,
+        "embargo_targets": 4,
+        "first_test_origin_date": "2025-04-30",
+        "first_test_target_date": "2025-05-07",
+        "last_test_target_date": "2026-10-30",
+        "interval_method": "absolute_residual_validation_quantile",
+        "nominal_confidence": 0.9,
+        "radius_usd": 5.220464527742706,
+        "empirical_test_coverage": 0.606951871657754,
+        "average_interval_width_usd": 10.440929055485412,
+        "selected_metrics": {
+          "n": 374,
+          "mae": 4.985868809403998,
+          "rmse": 6.454462785585878,
+          "smape_pct": 2.3001159235692312,
+          "bias": -1.2384803803374211
+        },
+        "naive_metrics": {
+          "n": 374,
+          "mae": 5.042577406939338,
+          "rmse": 6.526438386927048,
+          "smape_pct": 2.32957300974,
+          "bias": -1.623420511337525
+        },
+        "improvement_mae_pct": 1.1245954788378754,
+        "error_comparison_hac_exploratory": {
+          "n": 374,
+          "mean_absolute_loss_advantage": 0.056708597535339945,
+          "hac_lags": 4,
+          "hac_se": 0.034279753778090845,
+          "z_exploratory": 1.6542883563995727,
+          "p_value_exploratory": 0.09806893762382081
+        },
+        "p95_absolute_error_usd": 12.757845780770444
+      }
+    },
+    "MSFT": {
+      "1": {
+        "selected_model_from_s04_validation": "ar1_10.0",
+        "horizon_sessions": 1,
+        "train_observations": 1759,
+        "calibration_targets": 377,
+        "test_targets_after_embargo": 378,
+        "embargo_targets": 0,
+        "first_test_origin_date": "2025-04-30",
+        "first_test_target_date": "2025-05-01",
+        "last_test_target_date": "2026-10-30",
+        "interval_method": "absolute_residual_validation_quantile",
+        "nominal_confidence": 0.9,
+        "radius_usd": 8.832272459977332,
+        "empirical_test_coverage": 0.8227513227513228,
+        "average_interval_width_usd": 17.664544919954665,
+        "selected_metrics": {
+          "n": 378,
+          "mae": 5.395618641368133,
+          "rmse": 7.926384056299522,
+          "smape_pct": 1.2001127311537583,
+          "bias": 0.08580197710555648
+        },
+        "naive_metrics": {
+          "n": 378,
+          "mae": 5.401135318493715,
+          "rmse": 7.919444418521069,
+          "smape_pct": 1.2015744361922025,
+          "bias": -0.3471855688347388
+        },
+        "improvement_mae_pct": 0.10213921333711573,
+        "error_comparison_hac_exploratory": {
+          "n": 378,
+          "mean_absolute_loss_advantage": 0.0055166771255822445,
+          "hac_lags": 4,
+          "hac_se": 0.0232197714107828,
+          "z_exploratory": 0.23758533311918864,
+          "p_value_exploratory": 0.8122027273058051
+        },
+        "p95_absolute_error_usd": 14.03319285684469
+      },
+      "5": {
+        "selected_model_from_s04_validation": "ar1_10.0",
+        "horizon_sessions": 5,
+        "train_observations": 1759,
+        "calibration_targets": 377,
+        "test_targets_after_embargo": 374,
+        "embargo_targets": 4,
+        "first_test_origin_date": "2025-04-30",
+        "first_test_target_date": "2025-05-07",
+        "last_test_target_date": "2026-10-30",
+        "interval_method": "absolute_residual_validation_quantile",
+        "nominal_confidence": 0.9,
+        "radius_usd": 19.853480159079197,
+        "empirical_test_coverage": 0.820855614973262,
+        "average_interval_width_usd": 39.7069603181584,
+        "selected_metrics": {
+          "n": 374,
+          "mae": 12.764272599347718,
+          "rmse": 18.941763351994936,
+          "smape_pct": 2.8553434532650033,
+          "bias": 0.70480178544716
+        },
+        "naive_metrics": {
+          "n": 374,
+          "mae": 12.830066374916441,
+          "rmse": 18.91542009220018,
+          "smape_pct": 2.872761005892606,
+          "bias": -1.46051090668867
+        },
+        "improvement_mae_pct": 0.5128093156038127,
+        "error_comparison_hac_exploratory": {
+          "n": 374,
+          "mean_absolute_loss_advantage": 0.0657937755687245,
+          "hac_lags": 4,
+          "hac_se": 0.1781778897756013,
+          "z_exploratory": 0.3692589223701421,
+          "p_value_exploratory": 0.7119347405090584
+        },
+        "p95_absolute_error_usd": 36.34554967266375
+      }
+    },
+    "JPM": {
+      "1": {
+        "selected_model_from_s04_validation": "ar1_1.0",
+        "horizon_sessions": 1,
+        "train_observations": 1759,
+        "calibration_targets": 377,
+        "test_targets_after_embargo": 378,
+        "embargo_targets": 0,
+        "first_test_origin_date": "2025-04-30",
+        "first_test_target_date": "2025-05-01",
+        "last_test_target_date": "2026-10-30",
+        "interval_method": "absolute_residual_validation_quantile",
+        "nominal_confidence": 0.9,
+        "radius_usd": 4.5470571729000255,
+        "empirical_test_coverage": 0.783068783068783,
+        "average_interval_width_usd": 9.09411434580005,
+        "selected_metrics": {
+          "n": 378,
+          "mae": 3.0254776797429734,
+          "rmse": 3.998476053325977,
+          "smape_pct": 0.9898673036590881,
+          "bias": -0.036688438474089875
+        },
+        "naive_metrics": {
+          "n": 378,
+          "mae": 3.039111061701699,
+          "rmse": 4.009851227056801,
+          "smape_pct": 0.9946686020400926,
+          "bias": -0.26282694983103927
+        },
+        "improvement_mae_pct": 0.44859768800590283,
+        "error_comparison_hac_exploratory": {
+          "n": 378,
+          "mean_absolute_loss_advantage": 0.013633381958725755,
+          "hac_lags": 4,
+          "hac_se": 0.01305463532661457,
+          "z_exploratory": 1.044332654082745,
+          "p_value_exploratory": 0.2963315100827616
+        },
+        "p95_absolute_error_usd": 8.346934055893872
+      },
+      "5": {
+        "selected_model_from_s04_validation": "ar1_10.0",
+        "horizon_sessions": 5,
+        "train_observations": 1759,
+        "calibration_targets": 377,
+        "test_targets_after_embargo": 374,
+        "embargo_targets": 4,
+        "first_test_origin_date": "2025-04-30",
+        "first_test_target_date": "2025-05-07",
+        "last_test_target_date": "2026-10-30",
+        "interval_method": "absolute_residual_validation_quantile",
+        "nominal_confidence": 0.9,
+        "radius_usd": 12.879213331161935,
+        "empirical_test_coverage": 0.893048128342246,
+        "average_interval_width_usd": 25.75842666232387,
+        "selected_metrics": {
+          "n": 374,
+          "mae": 6.168525182464698,
+          "rmse": 7.8224310594795465,
+          "smape_pct": 2.0268380428928117,
+          "bias": -0.13207222207813013
+        },
+        "naive_metrics": {
+          "n": 374,
+          "mae": 6.292761817972928,
+          "rmse": 7.893676651525651,
+          "smape_pct": 2.075047275107872,
+          "bias": -1.2813011618221508
+        },
+        "improvement_mae_pct": 1.9742783709593814,
+        "error_comparison_hac_exploratory": {
+          "n": 374,
+          "mean_absolute_loss_advantage": 0.12423663550823055,
+          "hac_lags": 4,
+          "hac_se": 0.09513112277615937,
+          "z_exploratory": 1.305951531766902,
+          "p_value_exploratory": 0.19156904059392255
+        },
+        "p95_absolute_error_usd": 15.146050365913139
+      }
+    },
+    "WMT": {
+      "1": {
+        "selected_model_from_s04_validation": "ar1_10.0",
+        "horizon_sessions": 1,
+        "train_observations": 1759,
+        "calibration_targets": 377,
+        "test_targets_after_embargo": 378,
+        "embargo_targets": 0,
+        "first_test_origin_date": "2025-04-30",
+        "first_test_target_date": "2025-05-01",
+        "last_test_target_date": "2026-10-30",
+        "interval_method": "absolute_residual_validation_quantile",
+        "nominal_confidence": 0.9,
+        "radius_usd": 1.7067906169194202,
+        "empirical_test_coverage": 0.7724867724867724,
+        "average_interval_width_usd": 3.4135812338388405,
+        "selected_metrics": {
+          "n": 378,
+          "mae": 1.2049971505638903,
+          "rmse": 1.7242025274157746,
+          "smape_pct": 1.0736834239005895,
+          "bias": 0.00940209988771143
+        },
+        "naive_metrics": {
+          "n": 378,
+          "mae": 1.204619352148954,
+          "rmse": 1.7240298260620484,
+          "smape_pct": 1.0733547855617116,
+          "bias": -0.0728273744936343
+        },
+        "improvement_mae_pct": -0.03136247265680403,
+        "error_comparison_hac_exploratory": {
+          "n": 378,
+          "mean_absolute_loss_advantage": -0.00037779841493617097,
+          "hac_lags": 4,
+          "hac_se": 0.004452957234158066,
+          "z_exploratory": -0.0848421386215272,
+          "p_value_exploratory": 0.9323868925167293
+        },
+        "p95_absolute_error_usd": 3.41107905268416
+      },
+      "5": {
+        "selected_model_from_s04_validation": "ar1_10.0",
+        "horizon_sessions": 5,
+        "train_observations": 1759,
+        "calibration_targets": 377,
+        "test_targets_after_embargo": 374,
+        "embargo_targets": 4,
+        "first_test_origin_date": "2025-04-30",
+        "first_test_target_date": "2025-05-07",
+        "last_test_target_date": "2026-10-30",
+        "interval_method": "absolute_residual_validation_quantile",
+        "nominal_confidence": 0.9,
+        "radius_usd": 3.9098846643975733,
+        "empirical_test_coverage": 0.7540106951871658,
+        "average_interval_width_usd": 7.819769328795145,
+        "selected_metrics": {
+          "n": 374,
+          "mae": 2.8910170563486686,
+          "rmse": 3.8821257020121482,
+          "smape_pct": 2.5878559018303795,
+          "bias": 0.09546857550771412
+        },
+        "naive_metrics": {
+          "n": 374,
+          "mae": 2.9156669575900325,
+          "rmse": 3.8818565315864544,
+          "smape_pct": 2.6148448333181875,
+          "bias": -0.31620180670590325
+        },
+        "improvement_mae_pct": 0.8454292482615533,
+        "error_comparison_hac_exploratory": {
+          "n": 374,
+          "mean_absolute_loss_advantage": 0.02464990124136391,
+          "hac_lags": 4,
+          "hac_se": 0.03367897326739896,
+          "z_exploratory": 0.7319077409412853,
+          "p_value_exploratory": 0.46422488108193294
+        },
+        "p95_absolute_error_usd": 7.771381449317148
+      }
+    },
+    "XOM": {
+      "1": {
+        "selected_model_from_s04_validation": "naive",
+        "horizon_sessions": 1,
+        "train_observations": 1759,
+        "calibration_targets": 377,
+        "test_targets_after_embargo": 378,
+        "embargo_targets": 0,
+        "first_test_origin_date": "2025-04-30",
+        "first_test_target_date": "2025-05-01",
+        "last_test_target_date": "2026-10-30",
+        "interval_method": "absolute_residual_validation_quantile",
+        "nominal_confidence": 0.9,
+        "radius_usd": 2.251647949218736,
+        "empirical_test_coverage": 0.7566137566137566,
+        "average_interval_width_usd": 4.503295898437487,
+        "selected_metrics": {
+          "n": 378,
+          "mae": 1.6146836053757443,
+          "rmse": 2.1612248766187125,
+          "smape_pct": 1.1929667892014764,
+          "bias": -0.22875621331431878
+        },
+        "naive_metrics": {
+          "n": 378,
+          "mae": 1.6146836053757443,
+          "rmse": 2.1612248766187125,
+          "smape_pct": 1.1929667892014764,
+          "bias": -0.22875621331431878
+        },
+        "improvement_mae_pct": 0.0,
+        "error_comparison_hac_exploratory": {
+          "n": 378,
+          "mean_absolute_loss_advantage": 0.0,
+          "hac_lags": 4,
+          "hac_se": 0.0,
+          "z_exploratory": null,
+          "p_value_exploratory": null
+        },
+        "p95_absolute_error_usd": 4.4634368896484355
+      },
+      "5": {
+        "selected_model_from_s04_validation": "ar1_10.0",
+        "horizon_sessions": 5,
+        "train_observations": 1759,
+        "calibration_targets": 377,
+        "test_targets_after_embargo": 374,
+        "embargo_targets": 4,
+        "first_test_origin_date": "2025-04-30",
+        "first_test_target_date": "2025-05-07",
+        "last_test_target_date": "2026-10-30",
+        "interval_method": "absolute_residual_validation_quantile",
+        "nominal_confidence": 0.9,
+        "radius_usd": 4.570923190754371,
+        "empirical_test_coverage": 0.6844919786096256,
+        "average_interval_width_usd": 9.14184638150874,
+        "selected_metrics": {
+          "n": 374,
+          "mae": 3.86587992872074,
+          "rmse": 4.840969968006244,
+          "smape_pct": 2.8645431418799268,
+          "bias": -0.8584097938893164
+        },
+        "naive_metrics": {
+          "n": 374,
+          "mae": 3.918737115706989,
+          "rmse": 4.8893354462869105,
+          "smape_pct": 2.9037178869508256,
+          "bias": -1.1110752942090363
+        },
+        "improvement_mae_pct": 1.348832172854575,
+        "error_comparison_hac_exploratory": {
+          "n": 374,
+          "mean_absolute_loss_advantage": 0.052857186986249124,
+          "hac_lags": 4,
+          "hac_se": 0.023243117808764535,
+          "z_exploratory": 2.274100549725635,
+          "p_value_exploratory": 0.022959941661442003
+        },
+        "p95_absolute_error_usd": 9.928592449633355
+      }
+    }
+  }
+}
