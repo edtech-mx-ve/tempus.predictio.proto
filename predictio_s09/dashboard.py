@@ -10,6 +10,11 @@ from pathlib import Path
 
 import pandas as pd
 import streamlit as st
+import sys
+
+_REPO_ROOT = Path(__file__).resolve().parent.parent
+if str(_REPO_ROOT) not in sys.path:
+    sys.path.insert(0, str(_REPO_ROOT))
 
 from predictio_visual07.charts import validation_chart, test_predictions_chart, error_chart, prepare_test_predictions, prepare_error_series
 from predictio_s09.normality import histogram_figure, qq_figure, normality_summary
