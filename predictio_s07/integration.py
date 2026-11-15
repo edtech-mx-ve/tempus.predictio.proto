@@ -109,6 +109,20 @@ def validate_reports(reports: dict[int, dict[str, Any]]) -> str:
     return source_sha
 
 
+def hash_compatible(path: Path, esperado: str) -> bool:
+    if not isinstance(esperado, str) or len(esperado) != 64:
+        return False
+
+    datos = path.read_bytes()
+    lf = datos.replace(b"\r\n", b"\n")
+
+    return esperado in (
+        hashlib.sha256(datos).hexdigest(),
+        hashlib.sha256(lf).hexdigest(),
+        hashlib.sha256(lf.replace(b"\n", b"\r\n")).hexdigest(),
+    )
+
+
 def select_latest_complete(results_root: Path) -> tuple[dict[int, Path],dict[int, dict[str,Any]]]:
     """Usa ejecuciones completas existentes; no recalcula ni cambia ningún sprint."""
     root = Path(results_root).resolve(strict=True)
@@ -130,9 +144,11 @@ def select_latest_complete(results_root: Path) -> tuple[dict[int, Path],dict[int
             raise FileNotFoundError(f"Falta reporte aprobado S{sprint:02d}: {filename}. Ejecute antes ese sprint.")
     validate_reports(objects)
     # Evita mezclar una ejecución antigua de S04 o S05 con la nueva S06.
-    if (objects[5].get("s04_report_sha256") != sha256(paths[4] / REPORTS[4])
-        or objects[6].get("s04_report_sha256") != sha256(paths[4] / REPORTS[4])
-        or objects[6].get("s05_report_sha256") != sha256(paths[5] / REPORTS[5])):
+    if not (
+        hash_compatible(paths[4] / REPORTS[4], objects[5].get("s04_report_sha256"))
+        and hash_compatible(paths[4] / REPORTS[4], objects[6].get("s04_report_sha256"))
+        and hash_compatible(paths[5] / REPORTS[5], objects[6].get("s05_report_sha256"))
+    ):
         raise ValidationError("S04/S05/S06 no proceden de las mismas ejecuciones")
     return paths, objects
 
